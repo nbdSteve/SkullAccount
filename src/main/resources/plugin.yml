@@ -1,0 +1,12 @@
+name: SkullAccount
+version: ${project.version}
+main: gg.steve.mc.skull.sa.SkullAccount
+api-version: 1.13
+authors: [ stevegoodhill ]
+description: IP registration plugin for SkullWars.
+commands:
+  sacc:
+    usage: /<command>
+    description: Main command for SkullAccount, use this to reload the plugin.
+    aliases:
+      - skullaccount

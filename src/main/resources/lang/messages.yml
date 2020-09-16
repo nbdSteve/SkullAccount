@@ -1,0 +1,9 @@
+help:
+  action-bar: false
+  text:
+    - '&c&lSkullAccount&4| &7Example help message.'
+
+reload:
+  action-bar: false
+  text:
+    - '&c&lSkullAccount&4| &7Example reload message&7.'

@@ -1,0 +1,3 @@
+command:
+  reload: skullaccount.reload
+  help: skullaccount.help

@@ -1,0 +1,93 @@
+registration-length: 86400 # time in seconds that the registration will last
+
+kick-message: '&cYou must join on the IP that is &cREGISTERED &cfor this account.'
+
+gui:
+  type: 'none'
+  size: 45
+  name: '&cImportant - You Must Answer'
+  fillers:
+    slots:
+      - 0
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+      - 6
+      - 7
+      - 8
+      - 9
+      - 13
+      - 17
+      - 18
+      - 22
+      - 26
+      - 27
+      - 31
+      - 35
+      - 36
+      - 37
+      - 38
+      - 39
+      - 40
+      - 41
+      - 42
+      - 43
+      - 44
+    material: 'stained_glass_pane'
+    data: 7
+    name: ' '
+    lore:
+    enchantments:
+    item-flags:
+      - 'hide_attributes'
+  1:
+    slots:
+      - 10
+      - 11
+      - 12
+      - 19
+      - 20
+      - 21
+      - 28
+      - 29
+      - 30
+    action: 'register'
+    material: 'stained_glass_pane'
+    data: 5
+    name: '&a&lRegister'
+    lore:
+      - ''
+      - '&7Link your current ip with this'
+      - '&7 account for the next &c24 Hours&7.'
+    enchantments:
+    item-flags:
+      - 'hide_attributes'
+    unbreakable: false
+  2:
+    slots:
+      - 14
+      - 15
+      - 16
+      - 23
+      - 24
+      - 25
+      - 32
+      - 33
+      - 34
+    action: 'cancel'
+    commands:
+      - 'server hub {player}'
+    material: 'stained_glass_pane'
+    data: 14
+    name: '&c&lCancel'
+    lore:
+      - ''
+      - '&7Cancels the current action.'
+      - '&c&lNOTE: &7You will be redirected to the hub server.'
+      - ''
+    enchantments:
+    item-flags:
+      - 'hide_attributes'
+    unbreakable: false
