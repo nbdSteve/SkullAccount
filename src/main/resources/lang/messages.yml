@@ -7,3 +7,13 @@ reload:
   action-bar: false
   text:
     - '&c&lSkullAccount&4| &7Example reload message&7.'
+
+ip-link-success:
+  action-bar: false
+  text:
+    - '&c&lSkullAccount&4| &7Your IP address has been successfully linked.'
+
+ip-link-failure:
+  action-bar: false
+  text:
+    - '&c&lSkullAccount&4| &7There was an error linking your IP address, either it is already linked for this account or an internal error.'

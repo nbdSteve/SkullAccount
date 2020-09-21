@@ -1,14 +1,12 @@
 package gg.steve.mc.skull.sa.core;
 
 import gg.steve.mc.skull.sa.SkullAccount;
-import gg.steve.mc.skull.sa.framework.utils.LogUtil;
 import gg.steve.mc.skull.sa.framework.yml.Files;
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.entity.Player;
 
 import java.net.InetAddress;
-import java.net.InetSocketAddress;
 import java.util.*;
 
 public class RegistrationManager {

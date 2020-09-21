@@ -3,6 +3,7 @@ package gg.steve.mc.skull.sa.gui;
 import gg.steve.mc.skull.sa.core.RegistrationManager;
 import gg.steve.mc.skull.sa.framework.gui.AbstractGui;
 import gg.steve.mc.skull.sa.framework.gui.utils.GuiItemUtil;
+import gg.steve.mc.skull.sa.framework.message.GeneralMessage;
 import gg.steve.mc.skull.sa.framework.utils.CommandUtil;
 import org.bukkit.ChatColor;
 import org.bukkit.configuration.ConfigurationSection;
@@ -44,10 +45,11 @@ public class RegistryGui extends AbstractGui {
                         setItemInSlot(slot, item, (player, click) -> {
                             player.closeInventory();
                             if (RegistrationManager.registerPlayerIp(player)) {
-                                player.sendMessage(ChatColor.GREEN + "Thank you, your current IP has been linked with this account.");
+                                GeneralMessage.IP_LINK_SUCCESS.message(player);
                                 GuiManager.removeRequiredPlayer(player);
                             } else {
-                                player.sendMessage(ChatColor.RED + "An error occurred while registering your IP.");
+                                player.closeInventory();
+                                GeneralMessage.IP_LINK_FAILURE.message(player);
                             }
                         });
                     }

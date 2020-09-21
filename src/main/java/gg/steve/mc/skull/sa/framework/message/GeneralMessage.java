@@ -15,7 +15,9 @@ import java.util.List;
 
 public enum GeneralMessage {
     RELOAD("reload"),
-    HELP("help");
+    HELP("help"),
+    IP_LINK_SUCCESS("ip-link-success"),
+    IP_LINK_FAILURE("ip-link-failure");
 
     private String path;
     private boolean actionBar;
