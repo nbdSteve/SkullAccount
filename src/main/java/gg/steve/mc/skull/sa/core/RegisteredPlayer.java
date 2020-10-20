@@ -1,5 +1,6 @@
 package gg.steve.mc.skull.sa.core;
 
+import gg.steve.mc.skull.sa.framework.utils.EncryptionUtil;
 import gg.steve.mc.skull.sa.framework.utils.IpUtil;
 import gg.steve.mc.skull.sa.framework.yml.Files;
 import gg.steve.mc.skull.sa.gui.GuiManager;
@@ -18,8 +19,8 @@ public class RegisteredPlayer {
 
     public RegisteredPlayer(UUID playerId) {
         this.playerId = playerId;
-        this.ip = Files.DATA.get().getString(String.valueOf(playerId) + ".ip");
-        this.remaining = Files.DATA.get().getInt(String.valueOf(playerId) + ".remaining");
+        this.ip = EncryptionUtil.getDecrypted(Files.DATA.get().getString(playerId + ".ip"));
+        this.remaining = Files.DATA.get().getInt(playerId + ".remaining");
     }
 
     public RegisteredPlayer(Player player, int remaining) {
@@ -47,8 +48,8 @@ public class RegisteredPlayer {
         if (config.getConfigurationSection(String.valueOf(this.playerId)) == null) {
             config.createSection(String.valueOf(this.playerId));
         }
-        config.set(String.valueOf(this.playerId) + ".ip", this.ip);
-        config.set(String.valueOf(this.playerId) + ".remaining", this.remaining);
+        config.set(this.playerId + ".ip", EncryptionUtil.getEncrypted(this.ip));
+        config.set(this.playerId + ".remaining", this.remaining);
         Files.DATA.save();
     }
 
